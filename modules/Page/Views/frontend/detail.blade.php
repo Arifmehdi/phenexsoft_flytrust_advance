@@ -1,0 +1,99 @@
+@extends ('layouts.app')
+@section ('content')
+<div class="container py-4">
+    <!-- Tabs -->
+    <ul class="nav nav-tabs mb-3" id="searchTabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#flightTab">
+                ✈️ Flight
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#hotelTab">
+                🏨 Hotel
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tourTab">
+                🌍 Tour
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#visaTab">
+                🛂 Visa
+            </a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+
+        <!-- ========== Flight Tab ========== -->
+        <div class="tab-pane fade show active" id="flightTab">
+
+            <!-- Flight Type -->
+            <div class="mb-3">
+                <label class="me-3">
+                    <input type="radio" name="flightType" checked> One Way
+                </label>
+                <label class="me-3">
+                    <input type="radio" name="flightType"> Round Trip
+                </label>
+                <label>
+                    <input type="radio" name="flightType"> Multi City
+                </label>
+            </div>
+
+            <div class="row g-3">
+
+                <!-- From -->
+                <div class="col-md-4">
+                    <label class="form-label">From</label>
+                    <input type="text" class="form-control" placeholder="Dhaka (DAC)">
+                </div>
+
+                <!-- To -->
+                <div class="col-md-4">
+                    <label class="form-label">To</label>
+                    <input type="text" class="form-control" placeholder="Cox's Bazar (CXB)">
+                </div>
+
+                <!-- Departure -->
+                <div class="col-md-2">
+                    <label class="form-label">Departure</label>
+                    <input type="date" class="form-control">
+                </div>
+
+                <!-- Return -->
+                <div class="col-md-2">
+                    <label class="form-label">Return</label>
+                    <input type="date" class="form-control">
+                </div>
+
+                <!-- Traveler + Class -->
+                <div class="col-md-4">
+                    <label class="form-label">Traveler, Class</label>
+                    <select class="form-select">
+                        <option>1 Traveler – Economy</option>
+                        <option>2 Travelers – Economy</option>
+                        <option>1 Traveler – Business</option>
+                    </select>
+                </div>
+
+                <!-- Search Button -->
+                <div class="col-12">
+                    <button class="btn btn-primary w-100 mt-2">Search</button>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Flight Tab End -->
+
+        <!-- Empty placeholder tabs -->
+        <div class="tab-pane fade" id="hotelTab">Hotel Search Soon…</div>
+        <div class="tab-pane fade" id="tourTab">Tour Search Soon…</div>
+        <div class="tab-pane fade" id="visaTab">Visa Search Soon…</div>
+
+    </div>
+</div>
+@endsection

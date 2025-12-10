@@ -1,0 +1,42 @@
+9999999999s:1807:"<div class="d-md-flex d-lg-block">
+    <div class="mb-5 mr-md-7 mr-lg-0">
+        
+    </div>
+    <div class="ml-md-6 ml-lg-0">
+        <div class="mb-4 d-none">
+            <h4 class="h6 font-weight-bold mb-2 font-size-17 text-light">Contact Info</h4>
+            <address class="pr-4">
+                    <span class="mb-2 h6 font-weight-normal text-light">
+                        Office Address - 1234, Dhaka, Bangladesh -1213
+                    </span>
+            </address>
+        </div>
+        <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-2">
+                <a class="btn btn-icon btn-bg-transparent" 
+                    href="https://www.facebook.com/flytrust">
+                    <span class="fa fa-facebook-f btn-icon__inner text-light"></span>
+                </a>
+            </li>
+            <li class="list-inline-item mr-2">
+                <a class="btn btn-icon btn-bg-transparent" 
+                    href="https://www.linkedin.com/company/flytrust">
+                    <span class="fa fa-linkedin btn-icon__inner text-light"></span>
+                </a>
+            </li>
+            <li class="list-inline-item mr-2">
+                <a class="btn btn-icon btn-bg-transparent" 
+                    href="https://www.youtube.com/@flytrust">
+                    <span class="fa fa-youtube-play  btn-icon__inner text-light"></span>
+                </a>
+            </li>
+            <li class="list-inline-item mr-2">
+                <a class="btn btn-icon btn-bg-transparent" 
+                    href="https://www.instagram.com/flytrust/">
+                    <span class="fa fa-instagram btn-icon__inner text-light"></span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>";
