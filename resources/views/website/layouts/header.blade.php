@@ -8,13 +8,13 @@
                   <ul class="list-items">
                     <li>
                       <a href="#"
-                        ><i class="la la-phone me-1"></i>+88 017xxxxxxx</a
+                        ><i class="la la-phone me-1"></i> +880 1775 668424, +880 1937 994722</a
                       >
                     </li>
                     <li>
                       <a href="#"
                         ><i class="la la-envelope me-1"></i
-                        >flytrust@example.com</a
+                        >flytrustinternational@gmail.com</a
                       >
                     </li>
                   </ul>
@@ -26,7 +26,7 @@
                 <div
                   class="header-right d-flex align-items-center justify-content-end"
                 >
-                  <div class="header-right-action">
+                  {{--<div class="header-right-action">
                     <div class="select-contain select--contain w-auto">
                       <select class="select-contain-select">
                         <option
@@ -151,23 +151,59 @@
                         <option value="28">INR</option>
                       </select>
                     </div>
-                  </div>
+                  </div>--}}
+                  @auth
                   <div class="header-right-action">
-                    <a
-                      href="#"
-                      class="theme-btn theme-btn-small theme-btn-transparent me-1"
-                      data-bs-toggle="modal"
-                      data-bs-target="#signupPopupForm"
-                      >Sign Up</a
-                    >
-                    <a
-                      href="#"
-                      class="theme-btn theme-btn-small"
-                      data-bs-toggle="modal"
-                      data-bs-target="#loginPopupForm"
-                      >Login</a
-                    >
+                      <div class="dropdown">
+                          <a class="theme-btn theme-btn-small dropdown-toggle" href="#" role="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="la la-user me-1"></i>{{ Auth::user()->name }}
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                              {{-- You may need to update these routes to match your application's routes --}}
+                              <li>
+                                  <a class="dropdown-item" 
+                                    href="{{ auth()->user()->role_id == 3 
+                                              ? url('/user/profile') 
+                                              : (auth()->user()->role_id == 2 
+                                                  ? url('/user/profile') 
+                                                  : url('/admin')) }}">
+                                      <i class="la la-dashboard me-2"></i>Dashboard
+                                  </a>
+                              </li>
+
+                             {{-- <li><a class="dropdown-item" href="{{ url('/user/profile') }}"><i class="la la-user-circle me-2"></i>My Profile</a></li>
+                              <li><a class="dropdown-item" href="{{ url('/user/change-password') }}"><i class="la la-lock me-2"></i>Change Password</a></li> --}}
+                              <li><hr class="dropdown-divider"></li>
+                              <li>
+                                  <a class="dropdown-item" href="{{ route('logout') }}"
+                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                      <i class="la la-power-off me-2"></i>Logout
+                                  </a>
+                                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                      @csrf
+                                  </form>
+                              </li>
+                          </ul>
+                      </div>
                   </div>
+                  @else
+                  <div class="header-right-action">
+                      <a
+                        href="#"
+                        class="theme-btn theme-btn-small theme-btn-transparent me-1"
+                        data-bs-toggle="modal"
+                        data-bs-target="#signupPopupForm"
+                        >Sign Up</a
+                      >
+                      <a
+                        href="#"
+                        class="theme-btn theme-btn-small"
+                        data-bs-toggle="modal"
+                        data-bs-target="#loginPopupForm"
+                        >Login</a
+                      >
+                  </div>
+                  @endauth                
                 </div>
               </div>
             </div>

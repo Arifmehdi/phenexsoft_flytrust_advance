@@ -15,14 +15,29 @@
 @endsection
 
 @push('css')
+<style>
+  .client-logo-item img {
+    filter: grayscale(0);
+    transition: filter 0.3s ease;
+}
 
+.client-logo-item img:hover {
+    filter: grayscale(100%);
+}
+
+</style>
 @endpush
 
 @section('content')
+
+
+<!-- hereo search start  -->
+@include('website.layouts.hero_search')
+<!-- hereo search end  -->
     <!-- ================================
     START HERO-WRAPPER AREA
 ================================= -->
-    <section class="hero-wrapper">
+    {{--<section class="hero-wrapper">
       <div class="hero-box hero-bg">
         <span class="line-bg line-bg1"></span>
         <span class="line-bg line-bg2"></span>
@@ -94,7 +109,7 @@
                       <i class="la la-shopping-bag me-1"></i>Visa
                     </a>
                   </li>
-                  {{-- <li class="nav-item">
+                  <li class="nav-item">
                     <a
                       class="nav-link d-flex align-items-center"
                       id="car-tab"
@@ -119,7 +134,7 @@
                     >
                       <i class="la la-ship me-1"></i>Cruises
                     </a>
-                  </li> --}}
+                  </li> 
                   <li class="nav-item">
                     <a
                       class="nav-link d-flex align-items-center"
@@ -2869,7 +2884,7 @@
           <path d="M0 10 0 0 A 90 59, 0, 0, 0, 100 0 L 100 10 Z"></path>
         </svg> -->
       </div>
-    </section>
+    </section>--}}
     <!-- end hero-wrapper -->
     <!-- ================================
     END HERO-WRAPPER AREA
@@ -2887,17 +2902,17 @@
                     <div class="row justify-content-center g-2">
 
                         <div class="col-6 col-md-4 text-center">
-                            <img src="https://ik.imagekit.io/w13m3d3rhif/web/homepage/tutorials/flight-web-3.png?tr=f-auto,pr-true"
+                            <img src="{{ asset('frontend/images/how_do/eng_flight_img.webp') }}"
                                  class="tutorial-img img-fluid">
                         </div>
 
                         <div class="col-6 col-md-4 text-center">
-                            <img src="https://ik.imagekit.io/w13m3d3rhif/web/homepage/tutorials/hotel-web-3.png?tr=f-auto,pr-true"
+                            <img src="{{ asset('frontend/images/how_do/eng_hotel-web-3.webp') }}"
                                  class="tutorial-img img-fluid">
                         </div>
 
                         <div class="col-6 col-md-4 text-center">
-                            <img src="https://ik.imagekit.io/w13m3d3rhif/web/homepage/tutorials/discount-web-3.png?tr=f-auto,pr-true"
+                            <img src="{{ asset('frontend/images/how_do/eng_discount-web-3.webp') }}"
                                  class="tutorial-img img-fluid">
                         </div>
 
@@ -2909,17 +2924,17 @@
                     <div class="row justify-content-center g-4">
 
                         <div class="col-6 col-md-4 text-center">
-                            <img src="https://ik.imagekit.io/w13m3d3rhif/web/homepage/tutorials/account-web-3.png?tr=f-auto,pr-true"
+                            <img src="{{ asset('frontend/images/how_do/eng_account-web-3.webp') }}"
                                  class="tutorial-img img-fluid">
                         </div>
 
                         <div class="col-6 col-md-4 text-center">
-                            <img src="https://ik.imagekit.io/w13m3d3rhif/web/homepage/tutorials/flight-web-3.png?tr=f-auto,pr-true"
+                            <img src="{{ asset('frontend/images/how_do/eng_flight_img.webp') }}"
                                  class="tutorial-img img-fluid">
                         </div>
 
                         <div class="col-6 col-md-4 text-center">
-                            <img src="https://ik.imagekit.io/w13m3d3rhif/web/homepage/tutorials/hotel-web-3.png?tr=f-auto,pr-true"
+                            <img src="{{ asset('frontend/images/how_do/eng_hotel-web-3.webp') }} "
                                  class="tutorial-img img-fluid">
                         </div>
 

@@ -315,10 +315,15 @@
     <!-- end modal-popup -->
 
     <!-- Template JS Files -->
-    <script src="{{ asset('frontend/js/jquery-3.7.1.min.js') }}"></script>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
+
+
+
     <script src="{{ asset('frontend/js/jquery-ui.js') }}"></script>
 
-    <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('frontend/js/select2.min.js') }}"></script>
     <script src="{{ asset('frontend/js/moment.min.js') }}"></script>
     <script src="{{ asset('frontend/js/daterangepicker.js') }}"></script>

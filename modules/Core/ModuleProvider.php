@@ -42,52 +42,52 @@ class ModuleProvider extends ModuleServiceProvider
         $this->app->bind(\RachidLaasri\LaravelInstaller\Controllers\DatabaseController::class,\Modules\Core\Installer\DatabaseController::class);
         $this->app->bind(\RachidLaasri\LaravelInstaller\Controllers\EnvironmentController::class,\Modules\Core\Installer\EnvironmentController::class);
     }
-    public static function getAdminMenu()
-    {
-        return [
-            'menu' => [
-                "position"   => 60,
-                'url'        => route('core.admin.menu.index'),
-                'title'      => __("Menu"),
-                'icon'       => 'icon ion-ios-apps',
-                'permission' => 'menu_view',
-                'group'      => 'system',
-            ],
-            'tools'=>[
-                "position"=>90,
-                'url'      => route('core.admin.tool.index'),
-                'title'    => __("Tools"),
-                'icon'     => 'icon ion-ios-hammer',
-                'group' => 'system',
-                'children' => [
-                    'module'=>[
-                        'title'=>__("Modules"),
-                        'url'=>route('core.admin.module.index'),
-                        'icon'=>'icon ion-md-color-wand',
-                        'permission'=>'setting_update'
-                    ],
-                    'language'=>[
-                        'url'        => route('language.admin.index'),
-                        'title'      => __('Languages'),
-                        'icon'       => 'icon ion-ios-globe',
-                        'permission' => 'language_manage',
-                    ],
-                    'translation'=>[
-                        'url'        => route('language.admin.translations.index'),
-                        'title'      => __("Translation Manager"),
-                        'icon'       => 'icon ion-ios-globe',
-                        'permission' => 'language_translation',
-                    ],
-                    'logs'=>[
-                        'url'        => route('admin.logs'),
-                        'title'      => __("System Logs"),
-                        'icon'       => 'icon ion-ios-nuclear',
-                        'permission' => 'system_log_view',
-                    ],
-                ]
-            ],
-        ];
-    }
+    // public static function getAdminMenu()
+    // {
+    //     return [
+    //         'menu' => [
+    //             "position"   => 60,
+    //             'url'        => route('core.admin.menu.index'),
+    //             'title'      => __("Menu"),
+    //             'icon'       => 'icon ion-ios-apps',
+    //             'permission' => 'menu_view',
+    //             'group'      => 'system',
+    //         ],
+    //         'tools'=>[
+    //             "position"=>90,
+    //             'url'      => route('core.admin.tool.index'),
+    //             'title'    => __("Tools"),
+    //             'icon'     => 'icon ion-ios-hammer',
+    //             'group' => 'system',
+    //             'children' => [
+    //                 'module'=>[
+    //                     'title'=>__("Modules"),
+    //                     'url'=>route('core.admin.module.index'),
+    //                     'icon'=>'icon ion-md-color-wand',
+    //                     'permission'=>'setting_update'
+    //                 ],
+    //                 'language'=>[
+    //                     'url'        => route('language.admin.index'),
+    //                     'title'      => __('Languages'),
+    //                     'icon'       => 'icon ion-ios-globe',
+    //                     'permission' => 'language_manage',
+    //                 ],
+    //                 'translation'=>[
+    //                     'url'        => route('language.admin.translations.index'),
+    //                     'title'      => __("Translation Manager"),
+    //                     'icon'       => 'icon ion-ios-globe',
+    //                     'permission' => 'language_translation',
+    //                 ],
+    //                 'logs'=>[
+    //                     'url'        => route('admin.logs'),
+    //                     'title'      => __("System Logs"),
+    //                     'icon'       => 'icon ion-ios-nuclear',
+    //                     'permission' => 'system_log_view',
+    //                 ],
+    //             ]
+    //         ],
+    //     ];
+    // }
 
     public static function getAdminMenuGroups()
     {
