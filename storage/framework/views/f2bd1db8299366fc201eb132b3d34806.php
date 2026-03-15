@@ -40,9 +40,7 @@
     }
     <?php endif; ?>
     <?php $__currentLoopData = get_bookable_services(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $id=>$class): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        <?php if($class::isEnable()): ?>
-            bookingCore.module.<?php echo e($id); ?> = '<?php echo e(route($id.'.search')); ?>';
-        <?php endif; ?>
+        
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     var i18n = {
         warning:"<?php echo e(__("Warning")); ?>",

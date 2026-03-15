@@ -35,6 +35,13 @@ return [
         'secret' => env('SPARKPOST_SECRET'),
     ],
 
+    'amadeus' => [
+        'client_id'     => env('AMADEUS_CLIENT_ID'),
+        'client_secret' => env('AMADEUS_CLIENT_SECRET'),
+        'base_url'      => env('AMADEUS_BASE_URL'),
+    ],
+
+
     'stripe' => [
         'model' => App\User::class,
         'key' => env('STRIPE_KEY'),

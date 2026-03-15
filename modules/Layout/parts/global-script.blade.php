@@ -40,9 +40,9 @@
     }
     @endif
     @foreach(get_bookable_services() as $id=>$class)
-        @if($class::isEnable())
+        {{--@if($class::isEnable())
             bookingCore.module.{{$id}} = '{{route($id.'.search')}}';
-        @endif
+        @endif --}}
     @endforeach
     var i18n = {
         warning:"{{__("Warning")}}",

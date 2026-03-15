@@ -80,14 +80,14 @@ class ModuleProvider extends ModuleServiceProvider
             ]
         ];
 
-        $is_disable_verification_feature = setting_item('user_disable_verification_feature');
-        if(empty($is_disable_verification_feature)){
-            $options['children']['user_verification'] = [
-                'url'        => route('user.admin.verification.index'),
-                'title'      => __('Verification Request :count',['count'=>$noti_verify ? sprintf('<span class="badge badge-warning">%d</span>',$noti_verify) : '']),
-                'permission' => 'user_view',
-            ];
-        }
+        // $is_disable_verification_feature = setting_item('user_disable_verification_feature');
+        // if(empty($is_disable_verification_feature)){
+        //     $options['children']['user_verification'] = [
+        //         'url'        => route('user.admin.verification.index'),
+        //         'title'      => __('Verification Request :count',['count'=>$noti_verify ? sprintf('<span class="badge badge-warning">%d</span>',$noti_verify) : '']),
+        //         'permission' => 'user_view',
+        //     ];
+        // }
 
 
         $count = PlanPayment::query()->where('object_model','plan')->where('status','processing')->count();
